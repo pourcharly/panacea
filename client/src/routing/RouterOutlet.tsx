@@ -1,11 +1,11 @@
-
-import { useRouter } from "./Router";
+import { useRouter } from "./Router.context";
 
 export default function RouterOutlet() {
     const { activatedRoute, parameters } = useRouter();
+    const Component = activatedRoute?.component;
 
     
     return (<>
-        { activatedRoute?.component && activatedRoute.component({ parameters }) }
+        { Component && <Component parameters={parameters}/> }
     </>);
 }

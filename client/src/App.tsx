@@ -1,9 +1,12 @@
-import React from 'react';
-import logo from './logo.svg';
 import './App.scss';
+import { useEffect } from 'react';
 import { Router, RouterOutlet, routes } from './routing';
-import { QRCode } from 'react-qrcode-logo';
-import IpfsService from './services/IpfsService';
+import { Container, CssBaseline, ThemeProvider } from '@mui/material';
+import { theme } from './theme';
+
+import { IpfsService } from './services';
+import { AppContext, AppProvider } from './contexts';
+import { AppHeader } from './components/AppHeader';
 
 /*(async () => {
   const service = new IpfsService();
@@ -14,20 +17,27 @@ import IpfsService from './services/IpfsService';
   console.log(data);
 })();*/
 
+
 function App() {
 
   return (
-    <div className="App">
-      <Router routes={ routes }>
+    <div id="app_root" className="App">
+      <AppProvider>
+        <ThemeProvider theme={ theme }>
+          <CssBaseline/>
+          <AppHeader/>
 
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <QRCode value="http:/www.google.com/fr"/>
-        </header>
+          <Router routes={ routes } AppContext={ AppContext }>
 
-        <RouterOutlet/>
+            <Container maxWidth="lg" sx={{ paddingTop: '100px'}}>
 
-      </Router>
+              <RouterOutlet/>
+
+            </Container>
+
+          </Router>
+        </ThemeProvider>
+      </AppProvider>
     </div>
   );
 }

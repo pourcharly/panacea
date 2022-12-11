@@ -1,7 +1,7 @@
 import * as IPFS from 'ipfs-core';
 
 
-export default class IpfsService {
+export class IpfsService {
     private node: IPFS.IPFS | void = void 0;
 
 
