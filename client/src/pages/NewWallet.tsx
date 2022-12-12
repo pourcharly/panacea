@@ -3,7 +3,6 @@ import Button from '@mui/material/Button';
 import { Box } from '@mui/system';
 import CreateNewFolderIcon from '@mui/icons-material/CreateNewFolder';
 import { useCallback, useState } from 'react';
-import { createAccount } from '../utils/wallet';
 import { useApp } from '../contexts';
 import { AppAction, Role } from '../enums';
 

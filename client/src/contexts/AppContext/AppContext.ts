@@ -1,5 +1,5 @@
 import { createContext, useContext } from "react";
-import { AppAction } from "../enums";
+import { AppAction } from "../../enums";
 import { Action, AppState, initialAppState } from "./appState";
 
 type AppContextType = {

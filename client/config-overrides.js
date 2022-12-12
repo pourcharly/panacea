@@ -6,7 +6,7 @@ module.exports = function override (config, env) {
     loaders.fallback = {
         "stream": require.resolve("stream-browserify"),
         "crypto": require.resolve("crypto-browserify"),
-        "os": require.resolve("os-browserify"),
+        // "os": require.resolve("os-browserify"),
     }
     
     return config

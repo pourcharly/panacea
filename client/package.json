@@ -2,6 +2,7 @@
   "name": "panacea-client",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://pourcharly.github.io/panacea/",
   "dependencies": {
     "@emotion/react": "^11.10.5",
     "@emotion/styled": "^11.10.5",
@@ -23,6 +24,7 @@
     "ecies-parity": "^0.1.1",
     "ecies-wasm": "^0.1.2",
     "eciesjs": "^0.3.16",
+    "gh-pages": "^4.0.0",
     "install": "^0.13.0",
     "ipfs-core": "^0.17.0",
     "ipfs-http-client": "^59.0.0",
@@ -38,14 +40,17 @@
     "stream-browserify": "^3.0.0",
     "typescript": "^4.9.3",
     "web-vitals": "^2.1.4",
-    "web3": "^1.8.1"
+    "web3": "^1.8.1",
+    "web3-provider-engine": "^16.0.4"
   },
   "scripts": {
     "start-main": "react-scripts start",
     "start": "react-app-rewired start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
@@ -67,6 +72,7 @@
   },
   "devDependencies": {
     "@types/eccrypto": "^1.1.3",
-    "@types/react-helmet": "^6.1.6"
+    "@types/react-helmet": "^6.1.6",
+    "@types/web3-provider-engine": "^14.0.1"
   }
 }

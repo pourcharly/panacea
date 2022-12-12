@@ -1,4 +1,4 @@
-import { Backdrop, Button, Card, CardContent, Divider, Grid, IconButton, Link, Paper, Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Typography } from "@mui/material";
+import { Backdrop, Button, Card, CardContent, Divider, Grid, IconButton, Paper, Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Typography } from "@mui/material";
 import * as dayjs from 'dayjs';
 import { theme } from "../theme";
 import QrCodeIcon from '@mui/icons-material/QrCode';
@@ -16,10 +16,11 @@ export default function PrescriptionList() {
     const { state: { role } } = useApp();
     const [showQrCode, setShowQrCode] = useState(false);
 
+
     const prescriptions: any[] = [
-        { date: new Date(), prescriptor: 'Dr. Who', status: 'Cloturée' },
+        /*{ date: new Date(), prescriptor: 'Dr. Who', status: 'Cloturée' },
         { date: new Date(), prescriptor: 'Dr. House', status: 'Délivré' },
-        { date: new Date(), prescriptor: 'Dr. Doctor', status: 'Archivée' },
+        { date: new Date(), prescriptor: 'Dr. Doctor', status: 'Archivée' },*/
     ];
 
     return (<>
