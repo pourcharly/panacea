@@ -1,13 +1,15 @@
 {
   "name": "truffle",
   "version": "1.0.0",
-  "description": "Truffle project with SimpleStorage contract",
+  "description": "Ordochain Project",
   "main": "truffle-config.js",
   "dependencies": {
-    "@truffle/hdwallet-provider": "^2.0.10"
+    "@openzeppelin/contracts": "^4.8.0",
+    "@truffle/hdwallet-provider": "^2.0.10",
+    "dotenv": "^16.0.3"
   },
-  "devDependencies": {},
   "scripts": {
+    "goerli": "truffle deploy --network goerli",
     "test": "truffle test"
   },
   "author": "",
