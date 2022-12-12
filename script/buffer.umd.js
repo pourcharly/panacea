@@ -1,0 +1,2 @@
+!function(e,f){"object"==typeof exports&&"undefined"!=typeof module?f(exports):"function"==typeof define&&define.amd?define(["exports"],f):f((e||self).bufferBrowser={})}(this,function(e){var f=function(e){var f={exports:{}};return function(e){"undefined"==typeof Buffer&&(Buffer=void 0),"undefined"==typeof Buffer&&(Buffer=Array),e.exports=Buffer}(f),f.exports}();e.Buffer=f.Buffer});
+//# sourceMappingURL=buffer.umd.js.map
